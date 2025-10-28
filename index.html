@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Job Application</h1>
+    <input id="userAge" placeholder="which year were you born?"><br><br>
+    <button onclick="aisha().value">Apply</button>
+
+    <script>
+        function aisha(yearofbirth) {
+            let currentYear = new Date().getFullYear()
+            let urage = currentYear - yearofbirth;
+            if (urage < 21) {
+                alert('you should still be in school');
+            } else if (urage > 21 && urage < 30) {
+                alert('Apply for graduate trainee')
+            } else if (urage > 30 && urage > 40) {
+                alert('Apply for branch mange<r')
+            } else if (urage > 40 && urage < 50) {
+                let workexprience = prompt('how many years working exprience do you have?');
+                if (workexprience > 10) alert('Apply for general Manager')
+            } else (urage > 50) 
+                alert('you ought to have retire by now, you cannot apply')
+            
+        }
+        aisha()
+
+
+
+    </script>
+
+</body>
+
+</html>
