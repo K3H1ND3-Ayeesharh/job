@@ -8,29 +8,34 @@
 </head>
 
 <body>
-    <p>Lorem ipsum dolor sit.</p>
+    
     <h1>Job Application</h1>
     <input id="userAge" placeholder="which year were you born?"><br><br>
-    <button onclick="aisha().value">Apply</button>
+    <button onclick="agecalcEngine()">Apply</button>
 
     <script>
         function aisha(yearofbirth) {
             let currentYear = new Date().getFullYear()
             let urage = currentYear - yearofbirth;
-            if (urage < 21) {
-                alert('you should still be in school');
-            } else if (urage > 21 && urage < 30) {
+            if (urage <21 || urage==21) {
+                alert('you should still be in school')
+            } else if (urage>21 && urage<30 || urage==30) {
                 alert('Apply for graduate trainee')
-            } else if (urage > 30 && urage > 40) {
+            } else if (urage > 30 && urage > 40 || urage==40) {
                 alert('Apply for branch mange<r')
-            } else if (urage > 40 && urage < 50) {
-                let workexprience = prompt('how many years working exprience do you have?');
-                if (workexprience > 10) alert('Apply for general Manager')
-            } else (urage > 50) 
-                alert('you ought to have retire by now, you cannot apply')
+            } else if (urage > 40 && urage < 50 || urage==50) { let workexprience = prompt('how many years working exprience do you have?')
+                if ( workexprience > 10 ) {
+                    alert( 'Apply for general Manager' )}
+            } else
+                {alert('you ought to have retire by now, you cannot apply')} 
             
+              
         }
-        aisha()
+       function agecalcEngine(){
+        const qualification = document.getElementById('userAge').value
+        aisha(qualification)
+    }
+        
 
 
 
